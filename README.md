@@ -3,7 +3,7 @@
 A terminal UI for managing processes listening on network ports.
 
 [![CI](https://github.com/Joselay/portui/actions/workflows/ci.yml/badge.svg)](https://github.com/Joselay/portui/actions/workflows/ci.yml)
-![Go](https://img.shields.io/badge/Go-1.25-00ADD8?logo=go&logoColor=white)
+![Go](https://img.shields.io/badge/Go-1.26-00ADD8?logo=go&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## Features

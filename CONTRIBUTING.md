@@ -5,7 +5,7 @@ Thanks for your interest in contributing!
 ## Getting Started
 
 1. Fork and clone the repo
-2. Make sure you have Go 1.25+ installed
+2. Make sure you have Go 1.26+ installed
 3. Build and run:
 
 ```bash
