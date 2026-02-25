@@ -9,9 +9,12 @@ A terminal UI for managing processes listening on network ports.
 ## Features
 
 - List all processes listening on TCP/UDP ports
-- Search and filter by process name, port, PID, or user
-- Kill processes with confirmation prompt
+- Search and filter by process name, port, PID, protocol, user, or state
+- Panel-based UI with bordered panels (lazygit-style)
+- Process list panel with detail panel side-by-side
+- Kill processes with confirmation (SIGTERM or SIGKILL)
 - Vim-style navigation
+- Tab to switch focus between panels
 
 ## Installation
 
@@ -41,10 +44,12 @@ go build -o portui
 |-----|--------|
 | `↑` / `k` | Move up |
 | `↓` / `j` | Move down |
-| `x` | Kill selected process |
+| `x` | Kill selected process (SIGTERM) |
+| `X` | Force kill selected process (SIGKILL) |
 | `r` | Refresh process list |
 | `/` | Search |
 | `esc` | Clear search |
+| `tab` | Switch panel focus |
 | `?` | Toggle help |
 | `q` / `ctrl+c` | Quit |
 

@@ -3,16 +3,18 @@ package ui
 import "github.com/charmbracelet/bubbles/key"
 
 type keyMap struct {
-	Up      key.Binding
-	Down    key.Binding
-	Kill    key.Binding
-	Refresh key.Binding
-	Search  key.Binding
-	Clear   key.Binding
-	Help    key.Binding
-	Quit    key.Binding
-	Confirm key.Binding
-	Cancel  key.Binding
+	Up        key.Binding
+	Down      key.Binding
+	Kill      key.Binding
+	ForceKill key.Binding
+	Refresh   key.Binding
+	Search    key.Binding
+	Clear     key.Binding
+	Tab       key.Binding
+	Help      key.Binding
+	Quit      key.Binding
+	Confirm   key.Binding
+	Cancel    key.Binding
 }
 
 func newKeyMap() keyMap {
@@ -27,7 +29,11 @@ func newKeyMap() keyMap {
 		),
 		Kill: key.NewBinding(
 			key.WithKeys("x"),
-			key.WithHelp("x", "kill process"),
+			key.WithHelp("x", "kill"),
+		),
+		ForceKill: key.NewBinding(
+			key.WithKeys("X"),
+			key.WithHelp("X", "force kill"),
 		),
 		Refresh: key.NewBinding(
 			key.WithKeys("r"),
@@ -39,7 +45,11 @@ func newKeyMap() keyMap {
 		),
 		Clear: key.NewBinding(
 			key.WithKeys("esc"),
-			key.WithHelp("esc", "clear search"),
+			key.WithHelp("esc", "clear"),
+		),
+		Tab: key.NewBinding(
+			key.WithKeys("tab"),
+			key.WithHelp("tab", "switch panel"),
 		),
 		Help: key.NewBinding(
 			key.WithKeys("?"),
@@ -61,14 +71,15 @@ func newKeyMap() keyMap {
 }
 
 func (k keyMap) ShortHelp() []key.Binding {
-	return []key.Binding{k.Up, k.Down, k.Kill, k.Refresh, k.Search, k.Quit}
+	return []key.Binding{k.Up, k.Down, k.Kill, k.ForceKill, k.Refresh, k.Search, k.Tab, k.Quit}
 }
 
 func (k keyMap) FullHelp() [][]key.Binding {
 	return [][]key.Binding{
 		{k.Up, k.Down},
-		{k.Kill, k.Refresh},
-		{k.Search, k.Clear},
+		{k.Kill, k.ForceKill},
+		{k.Refresh, k.Search},
+		{k.Tab, k.Clear},
 		{k.Help, k.Quit},
 	}
 }
