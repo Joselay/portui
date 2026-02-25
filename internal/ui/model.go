@@ -8,7 +8,7 @@ import (
 	"github.com/charmbracelet/bubbles/key"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/smaetongmenglay/portui/internal/process"
+	"github.com/Joselay/portui/internal/process"
 )
 
 type state int

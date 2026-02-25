@@ -2,6 +2,7 @@
 
 A terminal UI for managing processes listening on network ports.
 
+[![CI](https://github.com/Joselay/portui/actions/workflows/ci.yml/badge.svg)](https://github.com/Joselay/portui/actions/workflows/ci.yml)
 ![Go](https://img.shields.io/badge/Go-1.25-00ADD8?logo=go&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
@@ -15,7 +16,7 @@ A terminal UI for managing processes listening on network ports.
 ## Installation
 
 ```bash
-go install github.com/smaetongmenglay/portui@latest
+go install github.com/Joselay/portui@latest
 ```
 
 Or build from source:
@@ -46,6 +47,10 @@ go build -o portui
 | `esc` | Clear search |
 | `?` | Toggle help |
 | `q` / `ctrl+c` | Quit |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 

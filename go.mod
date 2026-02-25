@@ -1,4 +1,4 @@
-module github.com/smaetongmenglay/portui
+module github.com/Joselay/portui
 
 go 1.25.0
 
